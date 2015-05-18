@@ -20,7 +20,7 @@ head(mapdata)
 #map heatmap
 #overview map
 heatmap <- joinCountryData2Map (mapdata, joinCode = "ISO3", nameJoinColumn = "CountryCode")
-mapCountryData(mapToPlot = heatmap, mapRegion = "world", nameColumnToPlot = "Admissions", catMethod  = "quantiles", addLegend = FALSE ,oceanCol = "white", lwd = 0.5, colourPalette = c("#efd3d3", "#f47171", "#e22634", "#bb1c29", "#940f1a", "#560404"), numCats = 6 )
+mapCountryData(mapToPlot = heatmap, mapRegion = "world", nameColumnToPlot = "Admissions", catMethod  = c(1:12,13:16,17:19,20:23,24,25), addLegend = FALSE ,oceanCol = "white", lwd = 0.5, colourPalette = c("#efd3d3", "#f47171", "#e22634", "#bb1c29", "#940f1a", "#560404"), numCats = 6 )
 
 #get color palette from RColorBrewer
 # brewer.pal(5, "Reds")
